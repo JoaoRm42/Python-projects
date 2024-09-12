@@ -288,15 +288,15 @@ def game_init():
     pygame.display.set_icon(pygame.image.load('card.png'))
 
     # Music
-    # pygame.mixer.music.load('track.mp3')
-    # pygame.mixer.music.play(-1)
-    # pygame.mixer.music.set_volume(0.1)
+    pygame.mixer.music.load('track.mp3')
+    pygame.mixer.music.play(-1)
+    pygame.mixer.music.set_volume(0.1)
 
 def main():
     global rects, correct_answer_rect_idx, flag, next_rect, home, ingame, screen, questions, temp_questions_data, questions_data, home, quest_num, global_question, correct_answer_rect_idx, correct, flag, score, tmp_total_questions
 
     pygame.init()
-    #pygame.mixer.init()
+    pygame.mixer.init()
     game_init()
     main_screen()
     ingame = 0
