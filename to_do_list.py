@@ -65,6 +65,8 @@ def show_tasks_from_file():
         input("Exit?\n|> ")
     except:
         print("File doesn't exist!")
+        time.sleep(2)
+        return 1
 
 def remove_task_from_file():
     """Removes string from file by the index"""
@@ -98,11 +100,16 @@ def remove_task_from_file():
             f.writelines(lines)
 
         print("Task removed successfully.")
+        time.sleep(2)
 
     except FileNotFoundError:
         print("File doesn't exist!")
+        time.sleep(2)
+        return 1
     except Exception as e:
         print(f"An error occurred: {e}")
+        time.sleep(2)
+        return 1
 
 def menu():
     """Menu of the choices to be done inside program"""
